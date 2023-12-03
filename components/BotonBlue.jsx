@@ -1,12 +1,16 @@
-import Link from "next/link"
-
+import Link from "next/link";
 
 function BotonBlue({ texto, link }) {
-    return (
-        <>
-            <Link href={link} className="text-white w-auto p-3 rounded-xl bg-blue">{texto}</Link>
-        </>
-    )
+  return (
+    <>
+      <Link
+        href={link}
+        className="text-white w-auto p-3 rounded-xl bg-blue hover:bg-blue-light"
+      >
+        {texto}
+      </Link>
+    </>
+  );
 }
 
-export default BotonBlue
+export default BotonBlue;
