@@ -3,7 +3,7 @@ import { SearchIcon } from "./SearchIcon";
 
 export default function Search() {
   return (
-    <div className="w-[340px] h-[240px] px-8 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-pink-500 to-yellow-500 text-white ">
+    <div className="w-[340px] h-[240px] px-3 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-pink-500 to-yellow-500 text-white ">
       <Input
         label="Search"
         isClearable

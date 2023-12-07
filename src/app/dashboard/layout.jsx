@@ -1,8 +1,10 @@
 import BotonBlue from "@/components/BotonBlue";
 import BotonTheme from "@/components/BotonTheme";
+import CodeArea from "@/components/CodeArea";
 import LogoHanikom from "@/components/LogoHanikom";
 import Search from "@/components/Search";
 import UserLocal from "@/components/UserLocal";
+import UserMenu from "@/components/UserMenu";
 
 function LayoutDashboard({ children }) {
   return (
@@ -41,18 +43,20 @@ function LayoutDashboard({ children }) {
             </div>
           </div>
           <div className="col-span-1 flex justify-center">
-            <UserLocal />
+            <UserMenu />
           </div>
         </div>
         <div className="h-auto grid grid-cols-6">
-          <div className="col-span-4 divide-y divide-gray-dark">
+          <div className="col-span-4">
             <div className="h-20 flex items-center justify-between">
-              <h3 className="text-4xl font-bold">Dashboard</h3>
-              <Search/>
+              <h3 className="text-4xl font-bold p-3">Dashboard</h3>
+              <Search />
             </div>
             <div className="p-3">{children}</div>
           </div>
-          <div className="col-span-2">vacío</div>
+          <div className="col-span-2 p-3">
+            <CodeArea text={"npm install @nextui-org/hanikom"} />
+          </div>
         </div>
       </div>
     </div>

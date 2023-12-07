@@ -5,7 +5,7 @@ export default function CardHanikom() {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
   return (
-    <Card className="max-w-[340px]">
+    <Card className="max-w-[340px] hover:bg-gray hover:cursor-pointer">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
           <Avatar isBordered radius="full" size="md" src="https://res.cloudinary.com/dm4wfkipp/image/upload/v1683838529/github-logo-813485_p9ud3p.png" />

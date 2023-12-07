@@ -6,9 +6,9 @@ function UserLocal() {
       <User
         name="Fer Bermúdez"
         description={
-          <Link href="https://twitter.com/jrgarciadev" size="sm" isExternal>
+          <p className="text-blue-dark text-sm">
             blfernand.fb@gmail.com
-          </Link>
+          </p>
         }
         avatarProps={{
           src: "https://res.cloudinary.com/dm4wfkipp/image/upload/v1701800581/foto-cv_yynmsh.png",
