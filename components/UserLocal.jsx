@@ -1,8 +1,8 @@
-import { User, Link } from "@nextui-org/react";
+import { User } from "@nextui-org/react";
 
 function UserLocal() {
   return (
-    <>
+    <div className="hover:cursor-pointer">
       <User
         name="Fer Bermúdez"
         description={
@@ -14,7 +14,7 @@ function UserLocal() {
           src: "https://res.cloudinary.com/dm4wfkipp/image/upload/v1701800581/foto-cv_yynmsh.png",
         }}
       />
-    </>
+    </div>
   );
 }
 

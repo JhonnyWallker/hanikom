@@ -1,12 +1,35 @@
+"use client";
+
 import BotonBlue from "@/components/BotonBlue";
 import BotonTheme from "@/components/BotonTheme";
 import CodeArea from "@/components/CodeArea";
 import LogoHanikom from "@/components/LogoHanikom";
 import Search from "@/components/Search";
 import UserLocal from "@/components/UserLocal";
-import UserMenu from "@/components/UserMenu";
+import { useState, useEffect } from "react";
+import Dropdown from "@/components/Dropdown";
 
 function LayoutDashboard({ children }) {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      const closeMenu = () => {
+        setIsOpen(false);
+      };
+
+      window.addEventListener('click', closeMenu);
+
+      return () => window.removeEventListener('click', closeMenu);
+    }
+  }, [isOpen]);
+
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="h-screen grid grid-cols-6 divide-x divide-gray-dark">
       <div className="h-screen grid grid-rows-4 divide-y divide-gray-dark">
@@ -42,8 +65,8 @@ function LayoutDashboard({ children }) {
               <BotonTheme />
             </div>
           </div>
-          <div className="col-span-1 flex justify-center">
-            <UserMenu />
+          <div className="col-span-1 flex justify-center" onClick={toggleMenu}>
+            <UserLocal />
           </div>
         </div>
         <div className="h-auto grid grid-cols-6">
@@ -53,12 +76,22 @@ function LayoutDashboard({ children }) {
               <Search />
             </div>
             <div className="p-3">{children}</div>
+            {isOpen && (
+              <div onClick={(event) => event.stopPropagation()}>
+                {<div className="absolute top-20 right-60 divide divide-white">
+                  <Dropdown />
+                </div>}
+              </div>
+            )}
           </div>
           <div className="col-span-2 p-3">
             <CodeArea text={"npm install @nextui-org/hanikom"} />
           </div>
         </div>
+
       </div>
+
+
     </div>
   );
 }
