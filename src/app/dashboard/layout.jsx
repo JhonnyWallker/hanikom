@@ -8,9 +8,9 @@ import Search from "@/components/Search";
 import UserLocal from "@/components/UserLocal";
 import { useState, useEffect } from "react";
 import Dropdown from "@/components/Dropdown";
+import Link from "next/link";
 
 function LayoutDashboard({ children }) {
-
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -19,9 +19,9 @@ function LayoutDashboard({ children }) {
         setIsOpen(false);
       };
 
-      window.addEventListener('click', closeMenu);
+      window.addEventListener("click", closeMenu);
 
-      return () => window.removeEventListener('click', closeMenu);
+      return () => window.removeEventListener("click", closeMenu);
     }
   }, [isOpen]);
 
@@ -43,10 +43,18 @@ function LayoutDashboard({ children }) {
         </div>
         <div className="row-span-2 bg-gray w-full flex justify-center">
           <ul className="text-center">
-            <li className="text-blue font-bold text-xl m-5">Dashboard</li>
-            <li className="text-blue text-lg m-5">sección 1</li>
-            <li className="text-blue text-lg m-5">sección 2</li>
-            <li className="text-blue text-lg m-5">sección 3</li>
+            <li className="text-blue font-bold text-xl m-5">
+              <Link href={"/dashboard"}>Dashboard</Link>
+            </li>
+            <li className="text-blue text-lg m-5">
+              <Link href={"/dashboard/seccion1"}>sección 1</Link>
+            </li>
+            <li className="text-blue text-lg m-5">
+              <Link href={"//dashboard/seccion2"}>sección 2</Link>
+            </li>
+            <li className="text-blue text-lg m-5">
+              <Link href={"//dashboard/seccion3"}>sección 3</Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -65,7 +73,7 @@ function LayoutDashboard({ children }) {
               <BotonTheme />
             </div>
           </div>
-          <div className="col-span-1 flex justify-center" onClick={toggleMenu}>
+          <div className="col-span-1 flex justify-center items-center" onClick={toggleMenu}>
             <UserLocal />
           </div>
         </div>
@@ -78,9 +86,11 @@ function LayoutDashboard({ children }) {
             <div className="p-3">{children}</div>
             {isOpen && (
               <div onClick={(event) => event.stopPropagation()}>
-                {<div className="absolute top-20 right-60 divide divide-white">
-                  <Dropdown />
-                </div>}
+                {
+                  <div className="absolute top-20 right-60 divide divide-white">
+                    <Dropdown />
+                  </div>
+                }
               </div>
             )}
           </div>
@@ -88,10 +98,7 @@ function LayoutDashboard({ children }) {
             <CodeArea text={"npm install @nextui-org/hanikom"} />
           </div>
         </div>
-
       </div>
-
-
     </div>
   );
 }

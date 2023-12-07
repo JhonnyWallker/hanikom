@@ -24,6 +24,7 @@ module.exports = {
       "gray-dark": "#B5B5B5",
       white: "#FFFFFF",
       black: "#000000",
+      red: "#FF331F",
     },
   },
   darkMode: "class",
