@@ -37,9 +37,7 @@ function LayoutDashboard({ children }) {
           <div className="w-20 mt-3 m-auto">
             <LogoHanikom />
           </div>
-          <div className="flex justify-center mt-5">
-            <BotonBlue link={"/"} texto={"Add +"} />
-          </div>
+          
         </div>
         <div className="row-span-2 bg-gray w-full flex justify-center">
           <Nav />
