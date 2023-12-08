@@ -4,11 +4,11 @@ import BotonBlue from "@/components/BotonBlue";
 import BotonTheme from "@/components/BotonTheme";
 import CodeArea from "@/components/CodeArea";
 import LogoHanikom from "@/components/LogoHanikom";
-import Search from "@/components/Search";
 import UserLocal from "@/components/UserLocal";
 import { useState, useEffect } from "react";
 import Dropdown from "@/components/Dropdown";
-import Link from "next/link";
+import Support from "@/components/Support";
+import Nav from "@/components/Nav";
 
 function LayoutDashboard({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,28 +42,10 @@ function LayoutDashboard({ children }) {
           </div>
         </div>
         <div className="row-span-2 bg-gray w-full flex justify-center">
-          <ul className="text-center">
-            <li className="text-blue font-bold text-xl m-5">
-              <Link href={"/dashboard"}>Dashboard</Link>
-            </li>
-            <li className="text-blue text-lg m-5">
-              <Link href={"/dashboard/seccion1"}>sección 1</Link>
-            </li>
-            <li className="text-blue text-lg m-5">
-              <Link href={"//dashboard/seccion2"}>sección 2</Link>
-            </li>
-            <li className="text-blue text-lg m-5">
-              <Link href={"//dashboard/seccion3"}>sección 3</Link>
-            </li>
-          </ul>
+          <Nav />
         </div>
         <div>
-          <ul className="text-center">
-            <li className="text-gray-dark font-bold text-lg m-5">Support</li>
-            <li className="text-gray-dark text-sm m-5">Help Center</li>
-            <li className="text-gray-dark text-sm m-5">Doc</li>
-            <p className="text-gray-dark text-xs">© 2023 Hanikom v0.1</p>
-          </ul>
+          <Support />
         </div>
       </div>
       <div className="col-span-5 h-screen divide-y divide-gray-dark p-3">
@@ -73,16 +55,15 @@ function LayoutDashboard({ children }) {
               <BotonTheme />
             </div>
           </div>
-          <div className="col-span-1 flex justify-center items-center" onClick={toggleMenu}>
+          <div
+            className="col-span-1 flex justify-center items-center"
+            onClick={toggleMenu}
+          >
             <UserLocal />
           </div>
         </div>
         <div className="h-auto grid grid-cols-6">
           <div className="col-span-4">
-            <div className="h-20 flex items-center justify-between">
-              <h3 className="text-4xl font-bold p-3">Dashboard</h3>
-              <Search />
-            </div>
             <div className="p-3">{children}</div>
             {isOpen && (
               <div onClick={(event) => event.stopPropagation()}>
