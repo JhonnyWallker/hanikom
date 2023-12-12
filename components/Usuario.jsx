@@ -1,6 +1,6 @@
 import { User } from "@nextui-org/react";
 
-function UserLocal() {
+function Usuario() {
   return (
     <div className="hover:cursor-pointer">
       <User
@@ -18,4 +18,4 @@ function UserLocal() {
   );
 }
 
-export default UserLocal;
+export default Usuario;

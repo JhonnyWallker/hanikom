@@ -5,7 +5,7 @@ import Search from "@/components/Search";
 
 function dashboard() {
   return (
-    <div>
+    <>
       <div className="h-20 flex items-center justify-between">
         <h3 className="text-4xl font-bold p-3">Dashboard</h3>
         <Search/>
@@ -16,7 +16,7 @@ function dashboard() {
         <CardHanikom />
         <CardHanikom />
       </div>
-    </div>
+    </>
   );
 }
 

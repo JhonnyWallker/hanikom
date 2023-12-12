@@ -1,11 +1,9 @@
 import Link from "next/link";
 
-function NavLink({ href, text, color }) {
+function NavLink({ href, text }) {
   return (
     <>
-      <Link href={`${href}`} className={`text-${color}`}>
-        {text}
-      </Link>
+      <Link href={`${href}`}>{text}</Link>
     </>
   );
 }
