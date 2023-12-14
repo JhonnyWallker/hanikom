@@ -1,6 +1,7 @@
 import BotonBlue from "@/components/BotonBlue";
 import BotonGray from "@/components/BotonGray";
 import BotonTheme from "@/components/BotonTheme";
+import LoginForm from "@/components/LoginForm";
 import LogoHanikom from "@/components/LogoHanikom";
 import LogoSixVI from "@/components/LogoSixVI";
 
@@ -47,6 +48,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <LoginForm />
     </main>
   );
 }
