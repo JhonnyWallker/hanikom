@@ -25,6 +25,7 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
       red: "#FF331F",
+      blur: "#000000d9",
     },
   },
   darkMode: "class",

@@ -35,25 +35,25 @@ export default function Dropdown() {
         <Usuario />
       </div>
       {isOpen && (
-        <div className="bg-white border border-gray-dark shadow-md p-10 rounded-lg z-10 absolute">
+        <div className="bg-white border border-gray-dark shadow-md p-10 rounded-lg z-10 absolute ">
           <div key="profile" className="h-14 gap-2 text-md">
             <p className="font-bold">Signed in as</p>
             <p className="font-bold">@ferBermudez</p>
           </div>
-          <div className="my-3 text-gray-dark">
+          <div className="my-3 text-gray-dark flex justify-start">
             <Link
-              href={"/perfil"}
+              href={"/dashboard/mi-perfil"}
               key="settings"
               className={`text-sm hover:text-black cursor-pointer hover:bg-gray rounded-lg p-2 flex justify-center`}
             >
               <div className="mr-1">
                 <FontAwesomeIcon icon={faUserPen} />
               </div>
-              Editar Perfil
+              Mi Perfil
             </Link>
           </div>
 
-          <div className="border-t-1 border-gray-dark py-3 text-red">
+          <div className="border-t-1 border-gray-dark py-3 text-red flex justify-start">
             <Link
               href={"/"}
               key="settings"

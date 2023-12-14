@@ -1,23 +1,23 @@
-import NavLink from "./NavLink";
+import Link from "next/link";
 
 function Nav() {
   return (
     <>
       <ul className="text-center">
         <li className="font-bold text-xl m-5 text-blue">
-          <NavLink href={"/dashboard"} text={"Dashboard"} />
+          <Link href={"/dashboard"}>Dashboard</Link>
         </li>
         <li className="font-bold text-xl m-5 text-blue">
-          <NavLink href={"/dashboard/seccion1"} text={"Card 1"} />
+          <Link href={"/dashboard/seccion1"}>Tarjeta 1</Link>
         </li>
         <li className="font-bold text-xl m-5 text-blue">
-          <NavLink href={"/dashboard/seccion1"} text={"Card 2"} />
+          <Link href={"/dashboard/seccion1"}>Tarjeta 2</Link>
         </li>
         <li className="font-bold text-xl m-5 text-blue">
-          <NavLink href={"/dashboard/seccion1"} text={"Card 3"} />
+          <Link href={"/dashboard/seccion1"}>Tarjeta 3</Link>
         </li>
         <li className="font-bold text-xl m-5 text-blue">
-          <NavLink href={"/dashboard/seccion1"} text={"Card 4"} />
+          <Link href={"/dashboard/seccion1"}>Tarjeta 4</Link>
         </li>
       </ul>
     </>

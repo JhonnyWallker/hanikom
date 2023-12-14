@@ -5,7 +5,7 @@ export default function Search() {
   return (
     <div className="w-[340px] h-[240px] px-3 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-pink-500 to-yellow-500 text-white ">
       <Input
-        label="Search"
+        label="Buscar"
         isClearable
         radius="lg"
         classNames={{
@@ -29,7 +29,7 @@ export default function Search() {
             "!cursor-text",
           ],
         }}
-        placeholder="Type to search..."
+        placeholder="Ingrese para buscar..."
         startContent={
           <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
         }
