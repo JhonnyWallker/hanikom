@@ -5,7 +5,7 @@ function BotonBlue({ texto, link }) {
     <>
       <Link
         href={link}
-        className="text-white w-auto p-3 rounded-xl bg-blue hover:bg-blue-dark"
+        className="text-white w-full p-3 rounded-xl bg-blue hover:bg-blue-dark"
       >
         {texto}
       </Link>

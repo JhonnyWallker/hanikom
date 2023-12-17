@@ -6,7 +6,7 @@ function Support() {
     <>
       <ul className="text-center">
         <li className="text-gray-dark font-bold text-lg m-5">Soporte</li>
-        <li className="text-gray-dark text-sm flex justify-center hover:text-blue-dark cursor-pointer">
+        <li className="text-gray-dark text-sm flex justify-center cursor-pointer">
           <div className="w-5 mr-1">
             <FontAwesomeIcon icon={faLifeRing} />
           </div>

@@ -1,7 +1,6 @@
 import BotonBlue from "@/components/BotonBlue";
 import BotonGray from "@/components/BotonGray";
 import BotonTheme from "@/components/BotonTheme";
-import LoginForm from "@/components/LoginForm";
 import LogoHanikom from "@/components/LogoHanikom";
 import LogoSixVI from "@/components/LogoSixVI";
 
@@ -27,7 +26,7 @@ export default function Home() {
 
         <div className="flex justify-center mt-3">
           <div className="m-3">
-            <BotonBlue texto={"Get Started"} link={"/dashboard"} />
+            <BotonBlue texto={"Registrate"} link={"/register"} />
           </div>
           <div className="m-3">
             <BotonGray texto={"Log in"} link={"/user"} />
@@ -48,7 +47,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <LoginForm />
     </main>
   );
 }
