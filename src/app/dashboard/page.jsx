@@ -10,7 +10,7 @@ function dashboard() {
         <h3 className="text-4xl font-bold p-3">Dashboard</h3>
         <Search/>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="flex flex-wrap gap-3">
         <CardHanikom />
         <CardHanikom />
         <CardHanikom />

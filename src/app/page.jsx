@@ -26,10 +26,10 @@ export default function Home() {
 
         <div className="flex justify-center mt-3">
           <div className="m-3">
-            <BotonBlue texto={"Registrate"} link={"/register"} />
+            <BotonBlue texto={"Sign Up"} link={"/register"} />
           </div>
           <div className="m-3">
-            <BotonGray texto={"Log in"} link={"/user"} />
+            <BotonGray texto={"Sign in"} link={"/user"} />
           </div>
         </div>
         <div className="flex justify-center mt-5">

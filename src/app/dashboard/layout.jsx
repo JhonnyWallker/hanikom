@@ -36,7 +36,7 @@ function LayoutDashboard({ children }) {
         </div>
         <div className="h-auto grid grid-cols-6">
           <div className="col-span-4">
-            <div className="p-3">{children}</div>
+            <div className="p-1 flex-wrap">{children}</div>
           </div>
           <div className="col-span-2 p-3">
             <CodeArea text={"npm install @nextui-org/hanikom"} />
